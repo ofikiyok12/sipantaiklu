@@ -1,0 +1,882 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Sistem Interaktif Chatbot</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <!-- animate CSS -->
+    <link rel="stylesheet" href="css/animate.css">
+    <!-- owl carousel CSS -->
+    <link rel="stylesheet" href="css/owl.carousel.min.css">
+    <!-- themify CSS -->
+    <link rel="stylesheet" href="css/themify-icons.css">
+    <!-- flaticon CSS -->
+    <link rel="stylesheet" href="css/flaticon.css">
+    <!-- fontawesome CSS -->
+    <link rel="stylesheet" href="fontawesome/css/all.min.css">
+    <!-- magnific CSS -->
+    <link rel="stylesheet" href="css/magnific-popup.css">
+    <link rel="stylesheet" href="css/gijgo.min.css">
+    <!-- niceselect CSS -->
+    <link rel="stylesheet" href="css/nice-select.css">
+    <!-- slick CSS -->
+    <link rel="stylesheet" href="css/slick.css">
+    <!-- style CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap" rel="stylesheet">
+    
+</head>
+
+<body>
+   <!--::header part start::-->
+   <header class="main_menu">
+        <div class="sub_menu">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-6 col-sm-12 col-md-6">
+                    </div>
+                    <div class="col-lg-6 col-sm-12 col-md-6">
+                        <div class="sub_menu_social_icon">
+                            <a href="#"><i class="flaticon-facebook"></i></a>
+                            <a href="#"><i class="flaticon-twitter"></i></a>
+                            <a href="#"><i class="flaticon-skype"></i></a>
+                            <a href="#"><i class="flaticon-instagram"></i></a>
+                            <span><i class="flaticon-phone-call"></i>+880 356 257 142</a></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="main_menu_iner">
+            <div class="container">
+                <div class="row align-items-center ">
+                    <div class="col-lg-12">
+                        <nav class="navbar navbar-expand-lg navbar-light justify-content-between">
+                            <a class="navbar-brand" href="index.html"> <p>PantaiKLU.</p> </a>
+                            <button class="navbar-toggler" type="button" data-toggle="collapse"
+                                data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                                aria-expanded="false" aria-label="Toggle navigation">
+                                <span class="navbar-toggler-icon"></span>
+                            </button>
+
+                            <div class="collapse navbar-collapse main-menu-item justify-content-center"
+                                id="navbarSupportedContent">
+                                <ul class="navbar-nav">
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="index.html">Beranda</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="#galeri">Galeri</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="#about">Tentang</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="#chatbot-section">Chatbot</a>
+                                    </li>
+                                    <!-- <li class="nav-item">
+                                        <a class="nav-link" href="#kontak">Kontak</a>
+                                    </li> -->
+                                </ul>
+                            </div>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- Header part end-->
+
+    <!-- banner part start-->
+    <section class="banner_part">
+        <div class="container">
+            <div class="row align-items-center justify-content-center">
+                <div class="col-lg-10">
+                    <div class="banner_text text-center">
+                        <div class="banner_text_iner">
+                            <h1> Wisata Pantai Lombok Utara</h1>
+                            <p>Selamat datang di layanan informasi Wisata Pantai Lombok Utara</p>
+                            <a href="#chatbot-section" class="btn_1">Mulai Chat</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- banner part start-->
+
+    <!--top place start-->
+    <section id="galeri" class="top_place section_padding">
+        <div class="container-fluid">
+            <div class="text-center mb-5">
+                <div class="section_tittle text-center">
+                    <h2>Galeri Wisata Pantai Lombok Utara</h2>
+                    <p>home . about us</p>
+                </div>
+            </div>
+            
+            <!-- Loading indicator -->
+            <div id="loading" class="loading" style="display: none;">
+                <div class="spinner-border text-primary" role="status">
+                    <span class="visually-hidden">Loading...</span>
+                </div>
+                <p class="mt-2">Memuat data...</p>
+            </div>
+            
+            <!-- Places container -->
+            <div id="places-container" class="row">
+                <!-- Content will be loaded here -->
+            </div>
+            
+            <!-- Pagination -->
+            <div class="pagination-container">
+                <div class="pagination-info">
+                    Menampilkan <span id="showing-start">0</span> - <span id="showing-end">0</span> dari <span id="total-items">0</span> tempat
+                </div>
+                <nav aria-label="Pagination">
+                    <ul class="pagination" id="pagination">
+                        <!-- Pagination buttons will be generated here -->
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </section>
+    <!--top place end-->
+
+    <!--::industries start::-->
+    <section id="about" class="best_services section_padding">
+        <div class="container">
+            <!-- Title Section dengan jarak yang diperbaiki -->
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <div class="section_tittle text-center">
+                        <h2>About Us</h2>
+                        <p>home . about us</p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Content Section -->
+            <div class="row align-items-center">
+                <div class="col-lg-6">
+                    <div class="about_img">
+                        <img src="img/sire.webp" alt="Pantai Lombok Utara">
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="about_text">
+                        <h5>Tentang Kami</h5>
+                        <h2>Menjelajah Keindahan Pantai Lombok Utara</h2>
+                        <p>Pantai-pantai di Lombok Utara menawarkan pesona alam yang luar biasa, mulai dari pasir putih, air laut yang jernih, hingga panorama matahari terbenam yang memukau. Setiap destinasi menyimpan keunikan dan daya tarik tersendiri yang layak untuk dieksplorasi.</p>
+                        <p>Kami hadir untuk memperkenalkan keindahan pantai-pantai di wilayah ini kepada para wisatawan lokal maupun mancanegara, serta mendorong pertumbuhan pariwisata yang berkelanjutan dan berbasis budaya lokal.</p>
+                        <p>Melalui platform ini, Anda dapat menemukan informasi lengkap, rute perjalanan, serta rekomendasi aktivitas menarik yang dapat dilakukan di setiap lokasi wisata pantai di Lombok Utara.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+      <!-- Chatbot Section -->
+      <section id="chatbot-section" class="section_padding">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-xl-6">
+                    <div class="section_tittle text-center">
+                        <h2>Chatbot Wisata</h2>
+                        <p>Tanyakan tentang wisata Pantai Lombok Utara</p>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12">
+                    <div class="chat-container" id="chatbot">
+                        <div class="chat-header">
+                            <div class="header-info">
+                                <div class="bot-avatar">🏝️</div>
+                                <div class="header-text">
+                                    <h2>Chatbot Wisata Pantai KLU</h2>
+                                    <!-- <p>Asisten virtual untuk wisata Lombok Utara</p> -->
+                                </div>
+                            </div>
+                            <div class="status-indicator"></div>
+                        </div>
+
+                        <div class="chat-messages" id="chatMessages">
+                            <!--  -->
+                        </div>
+
+                        <div class="chat-input-container">
+                            <div class="chat-input">
+                                <textarea
+                                    id="userInput"
+                                    placeholder="Ketik pesan Anda di sini..."
+                                    rows="1"
+                                ></textarea>
+                                <button class="send-button" id="sendButton">
+                                    <svg viewBox="0 0 24 24" fill="currentColor">
+                                        <path d="M2.01 21L23 12 2.01 3 2 10l15 2-15 2z" />
+                                    </svg>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!--::industries end::-->
+    <!-- <div id="kontak" class="row justify-content-center">
+        <div class="col-xl-6">
+            <div class="section_tittle text-center">
+                <h2>Kontak</h2>
+                <p>home . kontak</p>
+            </div>
+        </div>
+    </div> -->
+    <!-- <section  class="contact-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <h2 class="contact-title">Get in Touch</h2>
+                </div>
+                <div class="col-lg-8">
+                    <form class="form-contact contact_form" action="contact_process.php" method="post" id="contactForm" novalidate="novalidate">
+                        <div class="row">
+                            <div class="col-12">
+                                <div class="form-group">
+
+                                    <textarea class="form-control w-100" name="message" id="message" cols="30" rows="9" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Enter Message'" placeholder='Enter Message'></textarea>
+                                </div>
+                            </div>
+                            <div class="col-sm-6">
+                                <div class="form-group">
+                                    <input class="form-control" name="name" id="name" type="text" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Enter your name'" placeholder='Enter your name'>
+                                </div>
+                            </div>
+                            <div class="col-sm-6">
+                                <div class="form-group">
+                                    <input class="form-control" name="email" id="email" type="email" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Enter email address'" placeholder='Enter email address'>
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <div class="form-group">
+                                    <input class="form-control" name="subject" id="subject" type="text" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Enter Subject'" placeholder='Enter Subject'>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group mt-3">
+                            <button type="submit" class="button button-contactForm btn_1">Send Message</button>
+                        </div>
+                    </form>
+                </div>
+                <div class="col-lg-4">
+                    <div class="media contact-info">
+                        <span class="contact-info__icon"><i class="ti-home"></i></span>
+                        <div class="media-body">
+                            <h3>Buttonwood, California.</h3>
+                            <p>Rosemead, CA 91770</p>
+                        </div>
+                    </div>
+                    <div class="media contact-info">
+                        <span class="contact-info__icon"><i class="ti-tablet"></i></span>
+                        <div class="media-body">
+                            <h3>00 (440) 9865 562</h3>
+                            <p>Mon to Fri 9am to 6pm</p>
+                        </div>
+                    </div>
+                    <div class="media contact-info">
+                        <span class="contact-info__icon"><i class="ti-email"></i></span>
+                        <div class="media-body">
+                            <h3>support@colorlib.com</h3>
+                            <p>Send us your query anytime!</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section> -->
+
+    <!-- footer part start-->
+    <footer class="footer-area">
+        <div class="container">
+            <div class="row justify-content-between">
+                <div class="col-sm-6 col-md-5">
+                    <div class="single-footer-widget">
+                        <h4>Discover Destination</h4>
+                        <ul>
+                            <li><a href="#">Miami, USA</a></li>
+                            <li><a href="#">California, USA</a></li>
+                            <li><a href="#">London, UK</a></li>
+                            <li><a href="#">Saintmartine, Bangladesh</a></li>
+                            <li><a href="#">Mount Everast, India</a></li>
+                            <li><a href="#">Sidney, Australia</a></li>
+                            <li><a href="#">Miami, USA</a></li>
+                            <li><a href="#">California, USA</a></li>
+                            <li><a href="#">London, UK</a></li>
+                            <li><a href="#">Saintmartine, Bangladesh</a></li>
+                            <li><a href="#">Mount Everast, India</a></li>
+                            <li><a href="#">Sidney, Australia</a></li>
+                        </ul>
+
+                    </div>
+                </div>
+                <div class="col-sm-6 col-md-4">
+                    <div class="single-footer-widget">
+                        <h4>Subscribe Newsletter</h4>
+                        <div class="form-wrap" id="mc_embed_signup">
+                            <form target="_blank"
+                                action="https://spondonit.us12.list-manage.com/subscribe/post?u=1462626880ade1ac87bd9c93a&amp;id=92a4423d01"
+                                method="get" class="form-inline">
+                                <input class="form-control" name="EMAIL" placeholder="Your Email Address"
+                                    onfocus="this.placeholder = ''" onblur="this.placeholder = 'Your Email Address '"
+                                    required="" type="email">
+                                <button class="click-btn btn btn-default text-uppercase"> <i class="far fa-paper-plane"></i>
+                                </button>
+                                <div style="position: absolute; left: -5000px;">
+                                    <input name="b_36c4fd991d266f23781ded980_aefe40901a" tabindex="-1" value=""
+                                        type="text">
+                                </div>
+
+                                <div class="info"></div>
+                            </form>
+                        </div>
+                        <p>Subscribe our newsletter to get update news and offers</p>
+                    </div>
+                </div>
+                <div class="col-sm-6 col-md-3">
+                    <div class="single-footer-widget footer_icon">
+                        <h4>Contact Us</h4>
+                        <p>4156, New garden, New York, USA
+                                +880 362 352 783</p>
+                        <span>contact@martine.com</span>
+                        <div class="social-icons">
+                            <a href="#"><i class="ti-facebook"></i></a>
+                            <a href="#"><i class="ti-twitter-alt"></i></a>
+                            <a href="#"><i class="ti-pinterest"></i></a>
+                            <a href="#"><i class="ti-instagram"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container-fluid">
+            <div class="row justify-content-center">
+                <div class="col-lg-12">
+                    <div class="copyright_part_text text-center">
+                        <p class="footer-text m-0"><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="ti-heart" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
+<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- footer part end-->
+
+    <!-- jquery plugins here-->
+    <script src="js/jquery-1.12.1.min.js"></script>
+    <!-- popper js -->
+    <script src="js/popper.min.js"></script>
+    <!-- bootstrap js -->
+    <script src="js/bootstrap.min.js"></script>
+    <!-- magnific js -->
+    <script src="js/jquery.magnific-popup.js"></script>
+    <!-- swiper js -->
+    <script src="js/owl.carousel.min.js"></script>
+    <!-- masonry js -->
+    <script src="js/masonry.pkgd.js"></script>
+    <!-- masonry js -->
+    <script src="js/jquery.nice-select.min.js"></script>
+    <script src="js/gijgo.min.js"></script>
+    <!-- contact js -->
+    <script src="js/jquery.ajaxchimp.min.js"></script>
+    <script src="js/jquery.form.js"></script>
+    <script src="js/jquery.validate.min.js"></script>
+    <script src="js/mail-script.js"></script>
+    <script src="js/contact.js"></script>
+    <!-- custom js -->
+    <script src="js/custom.js"></script>
+    
+    <!-- AWS SDK -->
+    <script src="https://sdk.amazonaws.com/js/aws-sdk-2.1579.0.min.js"></script>
+
+    <script>
+      // Konfigurasi AWS Lex V2
+      AWS.config.region = "ap-southeast-1";
+      AWS.config.credentials = new AWS.CognitoIdentityCredentials({
+        IdentityPoolId: "ap-southeast-1:ecad4d16-d796-406c-b3c5-76ed5ecb3cc0",
+      });
+
+      const lexruntime = new AWS.LexRuntimeV2();
+      const botId = "SGSNGWZJMG";
+      const botAliasId = "TSTALIASID";
+      const localeId = "en_US";
+      const sessionId =
+        "user-session-" + Math.random().toString(36).substring(2, 12);
+
+      // Pesan selamat datang
+      document.addEventListener("DOMContentLoaded", function () {
+        setTimeout(() => {
+          addBotMessage(
+            "🏖️ Selamat datang di layanan informasi Wisata Pantai Lombok Utara!\n\nSaya siap membantu Anda menemukan pantai-pantai indah dan aktivitas seru di Lombok Utara. Silakan tanyakan apa saja tentang:\n\n• Pantai-pantai terbaik\n• Aktivitas wisata\n\nAda yang ingin Anda tanyakan?"
+          );
+        }, 1000);
+      });
+
+      const sendButton = document.getElementById("sendButton");
+      const textarea = document.getElementById("userInput");
+
+      sendButton.addEventListener("click", sendMessage);
+      textarea.addEventListener("keydown", function (e) {
+        if (e.key === "Enter" && !e.shiftKey) {
+          e.preventDefault();
+          sendMessage();
+        }
+      });
+
+      async function sendMessage() {
+        const message = textarea.value.trim();
+        if (!message) return;
+
+        addUserMessage(message);
+        textarea.value = "";
+        textarea.style.height = "auto";
+        sendButton.disabled = true;
+
+        const typingElement = addTypingIndicator();
+
+        const params = {
+          botId,
+          botAliasId,
+          localeId,
+          sessionId,
+          text: message,
+        };
+
+        try {
+          const response = await lexruntime.recognizeText(params).promise();
+
+          removeTypingIndicator(typingElement);
+
+          if (response.messages && response.messages.length > 0) {
+            response.messages.forEach((msg) => {
+              if (msg && msg.content) {
+                addBotMessage(msg.content);
+              }
+            });
+          } else {
+            addBotMessage(
+              "🤖 Maaf, saya tidak dapat memberikan respons saat ini."
+            );
+          }
+        } catch (error) {
+          removeTypingIndicator(typingElement);
+          console.error("Lex error:", error);
+
+          let errorMessage = "⚠️ Maaf, terjadi kesalahan teknis.";
+
+          if (error.code === "BadRequestException") {
+            errorMessage =
+              "⚠️ Format permintaan tidak valid. Coba tulis ulang pertanyaan Anda.";
+          } else if (error.code === "ThrottlingException") {
+            errorMessage =
+              "⚠️ Terlalu banyak permintaan. Mohon tunggu sebentar dan coba lagi.";
+          } else if (error.code === "LimitExceededException") {
+            errorMessage =
+              "⚠️ Batas permintaan tercapai. Silakan coba lagi nanti.";
+          }
+
+          addBotMessage(errorMessage);
+        }
+      }
+
+      // Enhanced message handling with better mobile UX
+      function addUserMessage(message) {
+        const chat = document.getElementById("chatMessages");
+        const messageGroup = document.createElement("div");
+        messageGroup.className = "message-group";
+
+        const msg = document.createElement("div");
+        msg.className = "message user-message";
+        msg.innerHTML = parseMessage(message);
+
+        const time = document.createElement("div");
+        time.className = "message-time";
+        time.textContent = getCurrentTime();
+
+        messageGroup.appendChild(msg);
+        messageGroup.appendChild(time);
+        chat.appendChild(messageGroup);
+
+        scrollToBottom();
+      }
+
+      function addBotMessage(message) {
+        const chat = document.getElementById("chatMessages");
+        const messageGroup = document.createElement("div");
+        messageGroup.className = "message-group";
+
+        const msg = document.createElement("div");
+        msg.className = "message bot-message";
+        msg.innerHTML = parseMessage(message || "");
+
+        const time = document.createElement("div");
+        time.className = "message-time";
+        time.textContent = getCurrentTime();
+        time.style.textAlign = "left";
+
+        messageGroup.appendChild(msg);
+        messageGroup.appendChild(time);
+        chat.appendChild(messageGroup);
+
+        scrollToBottom();
+      }
+
+      function addTypingIndicator() {
+        const chat = document.getElementById("chatMessages");
+        const typing = document.createElement("div");
+        typing.className = "typing-container";
+        typing.innerHTML = `
+          <span class="typing-text">Mengetik</span>
+          <div class="typing-dots">
+            <div class="typing-dot"></div>
+            <div class="typing-dot"></div>
+            <div class="typing-dot"></div>
+          </div>
+        `;
+        chat.appendChild(typing);
+        scrollToBottom();
+        return typing;
+      }
+
+      function removeTypingIndicator(element) {
+        if (element && element.parentNode) {
+          element.parentNode.removeChild(element);
+        }
+      }
+
+      function scrollToBottom() {
+        const chat = document.getElementById("chatMessages");
+        setTimeout(() => {
+          chat.scrollTop = chat.scrollHeight;
+        }, 50);
+      }
+
+      function getCurrentTime() {
+        return new Date().toLocaleTimeString("id-ID", {
+          hour: "2-digit",
+          minute: "2-digit",
+        });
+      }
+
+      function parseMessage(message) {
+        if (!message || typeof message !== "string") {
+          return "";
+        }
+        return message
+          .replace(
+            /(https?:\/\/[^\s]+)/g,
+            '<a href="$1" target="_blank" rel="noopener noreferrer">$1</a>'
+          )
+          .replace(/\n/g, "<br>");
+      }
+
+      // Initialize send button state
+      sendButton.disabled = true;
+
+      // Textarea auto-resize
+      function adjustTextareaHeight() {
+        textarea.style.height = "auto";
+        const maxHeight = window.innerWidth <= 480 ? 80 : 120;
+        textarea.style.height =
+          Math.min(textarea.scrollHeight, maxHeight) + "px";
+      }
+
+      textarea.addEventListener("input", function () {
+        adjustTextareaHeight();
+        sendButton.disabled = !this.value.trim();
+      });
+
+      // Prevent zoom on input focus for iOS
+      if (/iPad|iPhone|iPod/.test(navigator.userAgent)) {
+        textarea.style.fontSize = "16px";
+      }
+
+      
+    </script>
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // Data tempat wisata
+        const placesData = [
+            {
+                id: 1,
+                image: "https://www.pesisir.net/wp-content/uploads/2022/06/Alamat-Pantai-Setangi.jpg?w=500&h=300&fit=crop",
+                category: "Pantai",
+                title: "Pantai Setangi",
+                location: "Lombok, Indonesia"
+            },
+            {
+                id: 2,
+                image: "https://tse4.mm.bing.net/th?id=OIP.DgK0Bu55W4Yp2cIKGkZr-QHaDf&pid=Api&P=0&h=220?w=500&h=300&fit=crop",
+                category: "Pantai",
+                title: "Pantai Mentigi",
+                location: "Lombok, Indonesia",
+                rating: 4.7,
+                reviews: 189
+            },
+            {
+                id: 3,
+                image: "https://www.gemasulawesi.com/storage/photos/10012024063726.webp?w=500&h=300&fit=crop",
+                category: "Pantai",
+                title: "Pantai Klui",
+                location: "Lombok, Indonesia",
+                rating: 4.6,
+                reviews: 156
+            },
+            {
+                id: 4,
+                image: "https://cdn.idntimes.com/content-images/community/2022/04/155806875-767066377247096-7221681056409796985-n-07a4f29dba4b014075e472810bb49bf0-88b37fb1e4c2d926073018925b58a316.jpg?w=500&h=300&fit=crop",
+                category: "Pantai",
+                title: "Pantai Sire",
+                location: "Lombok, Indonesia",
+                rating: 4.9,
+                reviews: 312
+            },
+            {
+                id: 5,
+                image: "https://mediaim.expedia.com/destination/1/faa4b671cba99b990be4eae3fc9302cc.jpg?w=500&h=300&fit=crop",
+                category: "Pantai",
+                title: "Gili Trawangan",
+                location: "Lombok, Indonesia",
+                rating: 4.8,
+                reviews: 567
+            },
+            {
+                id: 6,
+                image: "https://1.bp.blogspot.com/-j1ReLBHM_v0/VWfjYr-hpGI/AAAAAAAAEx8/1cb0ZNTp64A/s1600/Pulau%2BGili%2BAir%2B2.jpg?w=500&h=300&fit=crop",
+                category: "Pantai",
+                title: "Gili Air",
+                location: "Lombok, Indonesia",
+                rating: 4.5,
+                reviews: 134
+            },
+            {
+                id: 7,
+                image: "https://2.bp.blogspot.com/-a9Rh4jo0nqc/Vde9qHXCLiI/AAAAAAAACNY/IBXUjMp_2XA/s1600/Gili%2BMeno%2BBeach.jpg?w=500&h=300&fit=crop",
+                category: "Pantai",
+                title: "Gili Meno",
+                location: "Lombok, Indonesia",
+                rating: 4.9,
+                reviews: 445
+            },
+            {
+                id: 8,
+                image: "https://img2.beritasatu.com/cache/beritasatu/960x620-3/1545323487.jpg?w=500&h=300&fit=crop",
+                category: "Pantai",
+                title: "Pantai Nipah",
+                location: "Lombok, Indonesia",
+                rating: 4.9,
+                reviews: 445
+            },
+            {
+                id: 9,
+                image: "https://yourtrip.id/wp-content/uploads/2022/05/Pantai-Impos-4-1080x570.jpg?w=500&h=300&fit=crop",
+                category: "Pantai",
+                title: "Pantai Impos",
+                location: "Lombok, Indonesia",
+                rating: 4.6,
+                reviews: 223
+            },
+            {
+                id: 10,
+                image: "https://cdn.idntimes.com/content-images/community/2022/03/20220321-065439-329ae2b286ff7799fbbec7d4597d307a-d7b656ebb94662902c10ccfb792b1567.jpg?w=500&h=300&fit=crop",
+                category: "Pantai",
+                title: "Pantai Ketapang",
+                location: "Lombok, Indonesia",
+                rating: 4.4,
+                reviews: 87
+            }
+        ];
+
+        // Pagination settings
+        let currentPage = 1;
+        const itemsPerPage = 4;
+        let filteredData = [...placesData];
+
+        // Function to render places
+        function renderPlaces(data, page) {
+            const container = document.getElementById('places-container');
+            const startIndex = (page - 1) * itemsPerPage;
+            const endIndex = startIndex + itemsPerPage;
+            const pageData = data.slice(startIndex, endIndex);
+
+            // Show loading
+            showLoading();
+
+            setTimeout(() => {
+                container.innerHTML = '';
+                
+                pageData.forEach(place => {
+                    const stars = generateStars(place.rating);
+                    const placeHtml = `
+                        <div class="col-lg-6 col-md-6">
+                            <div class="single_place fade-in">
+                                <img src="${place.image}" alt="${place.title}" loading="lazy">
+                                <div class="hover_Text d-flex align-items-end justify-content-between">
+                                    <div class="hover_text_iner">
+                                        <a href="#" class="place_btn">${place.category}</a>
+                                        <h3>${place.title}</h3>
+                                        <p>${place.location}</p>
+                                        <div class="place_review">
+                                            ${stars}
+                                            <span>(${place.reviews} review)</span>
+                                        </div>
+                                    </div>
+                                    <div class="details_icon text-right">
+                                        <i class="ti-share" onclick="sharePlace('${place.title}')"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    `;
+                    container.innerHTML += placeHtml;
+                });
+
+                hideLoading();
+                updatePaginationInfo(data, page);
+            }, 500);
+        }
+
+        // Function to generate star ratings
+        function generateStars(rating) {
+            const fullStars = Math.floor(rating);
+            const hasHalfStar = rating % 1 !== 0;
+            let starsHtml = '';
+
+            for (let i = 0; i < fullStars; i++) {
+                starsHtml += '<a href="#"><i class="fas fa-star"></i></a>';
+            }
+
+            if (hasHalfStar) {
+                starsHtml += '<a href="#"><i class="fas fa-star-half-alt"></i></a>';
+            }
+
+            const emptyStars = 5 - Math.ceil(rating);
+            for (let i = 0; i < emptyStars; i++) {
+                starsHtml += '<a href="#"><i class="far fa-star"></i></a>';
+            }
+
+            return starsHtml;
+        }
+
+        // Function to render pagination
+        function renderPagination(data, currentPage) {
+            const totalPages = Math.ceil(data.length / itemsPerPage);
+            const pagination = document.getElementById('pagination');
+            
+            pagination.innerHTML = '';
+
+            // Previous button
+            const prevDisabled = currentPage === 1 ? 'disabled' : '';
+            pagination.innerHTML += `
+                <li class="page-item ${prevDisabled}">
+                    <button type="button" class="page-link" ${prevDisabled ? 'disabled' : ''} onclick="changePage(${currentPage - 1})" aria-label="Previous">
+                        <span aria-hidden="true">&laquo;</span>
+                    </button>
+                </li>
+            `;
+
+            // Page numbers
+            for (let i = 1; i <= totalPages; i++) {
+                const active = i === currentPage ? 'active' : '';
+                pagination.innerHTML += `
+                    <li class="page-item ${active}">
+                        <button type="button" class="page-link" onclick="changePage(${i})">${i}</button>
+                    </li>
+                `;
+            }
+
+            // Next button
+            const nextDisabled = currentPage === totalPages ? 'disabled' : '';
+            pagination.innerHTML += `
+                <li class="page-item ${nextDisabled}">
+                    <button type="button" class="page-link" ${nextDisabled ? 'disabled' : ''} onclick="changePage(${currentPage + 1})" aria-label="Next">
+                        <span aria-hidden="true">&raquo;</span>
+                    </button>
+                </li>
+            `;
+        }
+
+        // Function to update pagination info
+        function updatePaginationInfo(data, page) {
+            const startIndex = (page - 1) * itemsPerPage + 1;
+            const endIndex = Math.min(page * itemsPerPage, data.length);
+            
+            document.getElementById('showing-start').textContent = startIndex;
+            document.getElementById('showing-end').textContent = endIndex;
+            document.getElementById('total-items').textContent = data.length;
+        }
+
+        // Function to change page
+        function changePage(newPage) {
+            const totalPages = Math.ceil(filteredData.length / itemsPerPage);
+            
+            if (newPage < 1 || newPage > totalPages) return;
+            
+            currentPage = newPage;
+            renderPlaces(filteredData, currentPage);
+            renderPagination(filteredData, currentPage);
+            
+            // Scroll to places container instead of top
+            const placesContainer = document.getElementById('places-container');
+            placesContainer.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+
+        // Function to show loading
+        function showLoading() {
+            document.getElementById('loading').style.display = 'block';
+            document.getElementById('places-container').style.opacity = '0.5';
+        }
+
+        // Function to hide loading
+        function hideLoading() {
+            document.getElementById('loading').style.display = 'none';
+            document.getElementById('places-container').style.opacity = '1';
+        }
+
+        // Function to share place
+        function sharePlace(placeName) {
+            if (navigator.share) {
+                navigator.share({
+                    title: placeName,
+                    text: `Lihat destinasi wisata ${placeName} yang menakjubkan!`,
+                    url: window.location.href
+                });
+            } else {
+                // Fallback for browsers that don't support Web Share API
+                const url = window.location.href;
+                navigator.clipboard.writeText(`${placeName} - ${url}`);
+                alert('Link telah disalin ke clipboard!');
+            }
+        }
+
+        // Initialize on page load
+        document.addEventListener('DOMContentLoaded', function() {
+            renderPlaces(filteredData, currentPage);
+            renderPagination(filteredData, currentPage);
+        });
+
+        // Prevent default behavior for pagination buttons
+        document.addEventListener('click', function(e) {
+            // Remove this event listener since we're using buttons now
+        });
+    </script>
+</body>
+
+</html>
