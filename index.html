@@ -45,7 +45,7 @@
                             <a href="#"><i class="flaticon-twitter"></i></a>
                             <a href="#"><i class="flaticon-skype"></i></a>
                             <a href="#"><i class="flaticon-instagram"></i></a>
-                            <span><i class="flaticon-phone-call"></i>+620 356 257 142</a></span>
+                            <span><i class="flaticon-phone-call"></i>+880 356 257 142</a></span>
                         </div>
                     </div>
                 </div>
@@ -109,43 +109,54 @@
     </section>
     <!-- banner part start-->
 
-    <!--top place start-->
-    <section id="galeri" class="top_place section_padding">
-        <div class="container-fluid">
-            <div class="text-center mb-5">
-                <div class="section_tittle text-center">
-                    <h2>Galeri Wisata Pantai Lombok Utara</h2>
-                    <p>home . about us</p>
-                </div>
-            </div>
-            
-            <!-- Loading indicator -->
-            <div id="loading" class="loading" style="display: none;">
-                <div class="spinner-border text-primary" role="status">
-                    <span class="visually-hidden">Loading...</span>
-                </div>
-                <p class="mt-2">Memuat data...</p>
-            </div>
-            
-            <!-- Places container -->
-            <div id="places-container" class="row">
-                <!-- Content will be loaded here -->
-            </div>
-            
-            <!-- Pagination -->
-            <div class="pagination-container">
-                <div class="pagination-info">
-                    Menampilkan <span id="showing-start">0</span> - <span id="showing-end">0</span> dari <span id="total-items">0</span> tempat
-                </div>
-                <nav aria-label="Pagination">
-                    <ul class="pagination" id="pagination">
-                        <!-- Pagination buttons will be generated here -->
-                    </ul>
-                </nav>
+  <!--top place start-->
+  <section id="galeri" class="top_place section_padding">
+    <div class="container-fluid">
+        <div class="text-center mb-5">
+            <div class="section_tittle text-center">
+                <h2>Galeri Pantai Lombok Utara</h2>
+                <p>home . galeri</p>
             </div>
         </div>
-    </section>
-    <!--top place end-->
+        
+        <!-- Loading indicator -->
+        <div class="container">
+      
+            <div id="loading" class="loading">
+              <p>Memuat galeri gambar...</p>
+            </div>
+      
+            <div id="error" class="error" style="display: none">
+              <h3>❌ Gagal Memuat Gambar</h3>
+              <p>
+                Maaf, terjadi kesalahan saat memuat galeri. Silakan coba lagi nanti.
+              </p>
+            </div>
+      
+            <div id="gallery" class="gallery"></div>
+      
+            <div id="pagination" class="pagination-container" style="display: none">
+              <div class="pagination-info">
+                <span id="pageInfo">Halaman 1 dari 1</span>
+              </div>
+              <div class="pagination-controls">
+                <button id="prevBtn" class="pagination-btn">← Sebelumnya</button>
+                <div class="page-numbers" id="pageNumbers"></div>
+                <button id="nextBtn" class="pagination-btn">Selanjutnya →</button>
+              </div>
+            </div>
+          </div>
+      
+          <!-- Modal untuk preview gambar -->
+          <div id="imageModal" class="modal">
+            <span class="close">&times;</span>
+            <div class="modal-content">
+              <img id="modalImage" src="" alt="" />
+            </div>
+          </div>
+    </div>
+</section>
+<!--top place end-->
 
     <!--::industries start::-->
     <section id="about" class="best_services section_padding">
@@ -229,13 +240,15 @@
         </div>
     </section>
 
+    </section> 
+
     <!-- footer part start-->
     <footer class="footer-area">
         <div class="container">
             <div class="row justify-content-between">
                 <div class="col-sm-6 col-md-5">
                     <div class="single-footer-widget">
-                        <h4>Destinasi Pantai</h4>
+                        <h4>Destinasi Pantai Lombok Utara</h4>
                         <ul>
                             <li><a href="#">Pemenang, KLU</a></li>
                             <li><a href="#">Tanjung, KLU</a></li>
@@ -243,15 +256,16 @@
                             <li><a href="#">Kayangan, KLU</a></li>
                             <li><a href="#">Bayan, KLU</a></li>
                         </ul>
+
                     </div>
                 </div>
-               
+                <!--  -->
                 <div class="col-sm-6 col-md-3">
                     <div class="single-footer-widget footer_icon">
                         <h4>Kontak Kami</h4>
-                        <p>Tanjung, Lombok Utara, NTB, Indonesia
+                        <p>Tanjung, Lombok Utara, Nusa Tenggara Barat, Indonesia
                                 +620 362 352 783</p>
-                        <span>contact sipantaiklu@gmail.com</span>
+                        <span>sipantaiklu@gmail.com.com</span>
                         <div class="social-icons">
                             <a href="#"><i class="ti-facebook"></i></a>
                             <a href="#"><i class="ti-twitter-alt"></i></a>
@@ -262,15 +276,9 @@
                 </div>
             </div>
         </div>
-<!--         <div class="container-fluid">
-            <div class="row justify-content-center">
-                <div class="col-lg-12">
-                    <div class="copyright_part_text text-center">
-                       <p>Copyri<p/>
-                    </div>
-                </div>
-            </div>
-        </div> -->
+        <div class="container-fluid">
+            
+        </div>
     </footer>
     <!-- footer part end-->
 
@@ -319,7 +327,7 @@
       document.addEventListener("DOMContentLoaded", function () {
         setTimeout(() => {
           addBotMessage(
-            "🏖️ Selamat datang di layanan informasi Wisata Pantai Lombok Utara!\n\nSaya siap membantu Anda menemukan pantai-pantai indah dan aktivitas seru di Lombok Utara. Silakan tanyakan apa saja tentang:\n\n• Pantai-pantai terbaik\n• Aktivitas wisata,lokasi,dll\n• Bantuan\n\nAda yang ingin Anda tanyakan?"
+            "🏖️ Selamat datang di layanan informasi Wisata Pantai Lombok Utara!\n\nSaya siap membantu Anda menemukan pantai-pantai indah dan aktivitas seru di Lombok Utara. Silakan tanyakan apa saja tentang:\n\n• Pantai-pantai terbaik\n• Aktivitas wisata,lokasi,dll\n• Bantuan\n\nCara Pakai Chatbot:\n\n• Ketik 'list pantai' untuk melihat list pantai'\n• Tanya 'Info (Nama Pantai)'\n\n\nAda yang ingin Anda tanyakan?"
           );
         }, 1000);
       });
@@ -508,271 +516,256 @@
     
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
     <script>
-        // Data tempat wisata
-        const placesData = [
-            {
-                id: 1,
-                image: "https://www.pesisir.net/wp-content/uploads/2022/06/Alamat-Pantai-Setangi.jpg?w=500&h=300&fit=crop",
-                category: "Pantai",
-                title: "Pantai Setangi",
-                location: "Lombok, Indonesia"
-            },
-            {
-                id: 2,
-                image: "https://tse4.mm.bing.net/th?id=OIP.DgK0Bu55W4Yp2cIKGkZr-QHaDf&pid=Api&P=0&h=220?w=500&h=300&fit=crop",
-                category: "Pantai",
-                title: "Pantai Mentigi",
-                location: "Lombok, Indonesia",
-                rating: 4.7,
-                reviews: 189
-            },
-            {
-                id: 3,
-                image: "https://www.gemasulawesi.com/storage/photos/10012024063726.webp?w=500&h=300&fit=crop",
-                category: "Pantai",
-                title: "Pantai Klui",
-                location: "Lombok, Indonesia",
-                rating: 4.6,
-                reviews: 156
-            },
-            {
-                id: 4,
-                image: "https://cdn.idntimes.com/content-images/community/2022/04/155806875-767066377247096-7221681056409796985-n-07a4f29dba4b014075e472810bb49bf0-88b37fb1e4c2d926073018925b58a316.jpg?w=500&h=300&fit=crop",
-                category: "Pantai",
-                title: "Pantai Sire",
-                location: "Lombok, Indonesia",
-                rating: 4.9,
-                reviews: 312
-            },
-            {
-                id: 5,
-                image: "https://mediaim.expedia.com/destination/1/faa4b671cba99b990be4eae3fc9302cc.jpg?w=500&h=300&fit=crop",
-                category: "Pantai",
-                title: "Gili Trawangan",
-                location: "Lombok, Indonesia",
-                rating: 4.8,
-                reviews: 567
-            },
-            {
-                id: 6,
-                image: "https://1.bp.blogspot.com/-j1ReLBHM_v0/VWfjYr-hpGI/AAAAAAAAEx8/1cb0ZNTp64A/s1600/Pulau%2BGili%2BAir%2B2.jpg?w=500&h=300&fit=crop",
-                category: "Pantai",
-                title: "Gili Air",
-                location: "Lombok, Indonesia",
-                rating: 4.5,
-                reviews: 134
-            },
-            {
-                id: 7,
-                image: "https://2.bp.blogspot.com/-a9Rh4jo0nqc/Vde9qHXCLiI/AAAAAAAACNY/IBXUjMp_2XA/s1600/Gili%2BMeno%2BBeach.jpg?w=500&h=300&fit=crop",
-                category: "Pantai",
-                title: "Gili Meno",
-                location: "Lombok, Indonesia",
-                rating: 4.9,
-                reviews: 445
-            },
-            {
-                id: 8,
-                image: "https://img2.beritasatu.com/cache/beritasatu/960x620-3/1545323487.jpg?w=500&h=300&fit=crop",
-                category: "Pantai",
-                title: "Pantai Nipah",
-                location: "Lombok, Indonesia",
-                rating: 4.9,
-                reviews: 445
-            },
-            {
-                id: 9,
-                image: "https://yourtrip.id/wp-content/uploads/2022/05/Pantai-Impos-4-1080x570.jpg?w=500&h=300&fit=crop",
-                category: "Pantai",
-                title: "Pantai Impos",
-                location: "Lombok, Indonesia",
-                rating: 4.6,
-                reviews: 223
-            },
-            {
-                id: 10,
-                image: "https://cdn.idntimes.com/content-images/community/2022/03/20220321-065439-329ae2b286ff7799fbbec7d4597d307a-d7b656ebb94662902c10ccfb792b1567.jpg?w=500&h=300&fit=crop",
-                category: "Pantai",
-                title: "Pantai Ketapang",
-                location: "Lombok, Indonesia",
-                rating: 4.4,
-                reviews: 87
-            }
-        ];
-
-        // Pagination settings
+        const API_URL =
+          "https://ka84cx7utl.execute-api.ap-southeast-1.amazonaws.com/prod/images";
+  
+        let allImages = [];
         let currentPage = 1;
-        const itemsPerPage = 4;
-        let filteredData = [...placesData];
-
-        // Function to render places
-        function renderPlaces(data, page) {
-            const container = document.getElementById('places-container');
-            const startIndex = (page - 1) * itemsPerPage;
-            const endIndex = startIndex + itemsPerPage;
-            const pageData = data.slice(startIndex, endIndex);
-
-            // Show loading
-            showLoading();
-
-            setTimeout(() => {
-                container.innerHTML = '';
-                
-                pageData.forEach(place => {
-                    const stars = generateStars(place.rating);
-                    const placeHtml = `
-                        <div class="col-lg-6 col-md-6">
-                            <div class="single_place fade-in">
-                                <img src="${place.image}" alt="${place.title}" loading="lazy">
-                                <div class="hover_Text d-flex align-items-end justify-content-between">
-                                    <div class="hover_text_iner">
-                                        <a href="#" class="place_btn">${place.category}</a>
-                                        <h3>${place.title}</h3>
-                                        <p>${place.location}</p>
-                                        <div class="place_review">
-                                            ${stars}
-                                            <span>(${place.reviews} review)</span>
-                                        </div>
-                                    </div>
-                                    <div class="details_icon text-right">
-                                        <i class="ti-share" onclick="sharePlace('${place.title}')"></i>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    `;
-                    container.innerHTML += placeHtml;
-                });
-
-                hideLoading();
-                updatePaginationInfo(data, page);
-            }, 500);
-        }
-
-        // Function to generate star ratings
-        function generateStars(rating) {
-            const fullStars = Math.floor(rating);
-            const hasHalfStar = rating % 1 !== 0;
-            let starsHtml = '';
-
-            for (let i = 0; i < fullStars; i++) {
-                starsHtml += '<a href="#"><i class="fas fa-star"></i></a>';
+        const imagesPerPage = 6;
+  
+        async function loadImages() {
+          const loadingDiv = document.getElementById("loading");
+          const errorDiv = document.getElementById("error");
+          const galleryDiv = document.getElementById("gallery");
+          const paginationDiv = document.getElementById("pagination");
+  
+          try {
+            const response = await fetch(API_URL, {
+              method: "GET",
+              headers: {
+                "Content-Type": "application/json",
+                Accept: "application/json",
+              },
+            });
+  
+            if (!response.ok) {
+              throw new Error(`HTTP ${response.status}: ${response.statusText}`);
             }
-
-            if (hasHalfStar) {
-                starsHtml += '<a href="#"><i class="fas fa-star-half-alt"></i></a>';
+  
+            const data = await response.json();
+  
+            // Cari array gambar dari berbagai kemungkinan struktur response
+            let images = null;
+            if (data.images && Array.isArray(data.images)) {
+              images = data.images;
+            } else if (data.data && Array.isArray(data.data)) {
+              images = data.data;
+            } else if (Array.isArray(data)) {
+              images = data;
+            } else if (data.Items && Array.isArray(data.Items)) {
+              images = data.Items;
+            } else if (data.body && typeof data.body === "string") {
+              try {
+                const parsedBody = JSON.parse(data.body);
+                if (parsedBody.images && Array.isArray(parsedBody.images)) {
+                  images = parsedBody.images;
+                }
+              } catch (e) {
+                console.log("Failed to parse body as JSON");
+              }
             }
-
-            const emptyStars = 5 - Math.ceil(rating);
-            for (let i = 0; i < emptyStars; i++) {
-                starsHtml += '<a href="#"><i class="far fa-star"></i></a>';
-            }
-
-            return starsHtml;
-        }
-
-        // Function to render pagination
-        function renderPagination(data, currentPage) {
-            const totalPages = Math.ceil(data.length / itemsPerPage);
-            const pagination = document.getElementById('pagination');
-            
-            pagination.innerHTML = '';
-
-            // Previous button
-            const prevDisabled = currentPage === 1 ? 'disabled' : '';
-            pagination.innerHTML += `
-                <li class="page-item ${prevDisabled}">
-                    <button type="button" class="page-link" ${prevDisabled ? 'disabled' : ''} onclick="changePage(${currentPage - 1})" aria-label="Previous">
-                        <span aria-hidden="true">&laquo;</span>
-                    </button>
-                </li>
-            `;
-
-            // Page numbers
-            for (let i = 1; i <= totalPages; i++) {
-                const active = i === currentPage ? 'active' : '';
-                pagination.innerHTML += `
-                    <li class="page-item ${active}">
-                        <button type="button" class="page-link" onclick="changePage(${i})">${i}</button>
-                    </li>
-                `;
-            }
-
-            // Next button
-            const nextDisabled = currentPage === totalPages ? 'disabled' : '';
-            pagination.innerHTML += `
-                <li class="page-item ${nextDisabled}">
-                    <button type="button" class="page-link" ${nextDisabled ? 'disabled' : ''} onclick="changePage(${currentPage + 1})" aria-label="Next">
-                        <span aria-hidden="true">&raquo;</span>
-                    </button>
-                </li>
-            `;
-        }
-
-        // Function to update pagination info
-        function updatePaginationInfo(data, page) {
-            const startIndex = (page - 1) * itemsPerPage + 1;
-            const endIndex = Math.min(page * itemsPerPage, data.length);
-            
-            document.getElementById('showing-start').textContent = startIndex;
-            document.getElementById('showing-end').textContent = endIndex;
-            document.getElementById('total-items').textContent = data.length;
-        }
-
-        // Function to change page
-        function changePage(newPage) {
-            const totalPages = Math.ceil(filteredData.length / itemsPerPage);
-            
-            if (newPage < 1 || newPage > totalPages) return;
-            
-            currentPage = newPage;
-            renderPlaces(filteredData, currentPage);
-            renderPagination(filteredData, currentPage);
-            
-            // Scroll to places container instead of top
-            const placesContainer = document.getElementById('places-container');
-            placesContainer.scrollIntoView({ behavior: 'smooth', block: 'start' });
-        }
-
-        // Function to show loading
-        function showLoading() {
-            document.getElementById('loading').style.display = 'block';
-            document.getElementById('places-container').style.opacity = '0.5';
-        }
-
-        // Function to hide loading
-        function hideLoading() {
-            document.getElementById('loading').style.display = 'none';
-            document.getElementById('places-container').style.opacity = '1';
-        }
-
-        // Function to share place
-        function sharePlace(placeName) {
-            if (navigator.share) {
-                navigator.share({
-                    title: placeName,
-                    text: `Lihat destinasi wisata ${placeName} yang menakjubkan!`,
-                    url: window.location.href
-                });
+  
+            if (images && images.length > 0) {
+              allImages = images;
+              displayCurrentPage();
+              setupPagination();
+              loadingDiv.style.display = "none";
+              paginationDiv.style.display = "flex";
             } else {
-                // Fallback for browsers that don't support Web Share API
-                const url = window.location.href;
-                navigator.clipboard.writeText(`${placeName} - ${url}`);
-                alert('Link telah disalin ke clipboard!');
+              throw new Error("Tidak ada gambar yang ditemukan");
             }
+          } catch (error) {
+            console.error("Error loading images:", error);
+            loadingDiv.style.display = "none";
+            errorDiv.style.display = "block";
+          }
         }
-
-        // Initialize on page load
-        document.addEventListener('DOMContentLoaded', function() {
-            renderPlaces(filteredData, currentPage);
-            renderPagination(filteredData, currentPage);
+  
+        function displayCurrentPage() {
+          const startIndex = (currentPage - 1) * imagesPerPage;
+          const endIndex = startIndex + imagesPerPage;
+          const currentImages = allImages.slice(startIndex, endIndex);
+  
+          displayImages(currentImages, startIndex);
+        }
+  
+        function displayImages(images, startIndex) {
+          const galleryDiv = document.getElementById("gallery");
+          galleryDiv.innerHTML = "";
+  
+          images.forEach((image, index) => {
+            const imageCard = document.createElement("div");
+            imageCard.className = "image-card";
+            imageCard.style.animationDelay = `${index * 0.1}s`;
+  
+            const actualIndex = startIndex + index;
+  
+            // Perbaiki nama gambar - hilangkan format/extension
+            let imageTitle = image.filename || `Gambar ${actualIndex + 1}`;
+            if (imageTitle.includes(".")) {
+              imageTitle = imageTitle.substring(0, imageTitle.lastIndexOf("."));
+            }
+  
+            // Buat nama yang lebih friendly
+            imageTitle = imageTitle
+              .replace(/[_-]/g, " ") // Ganti underscore dan dash dengan spasi
+              .replace(/\b\w/g, (l) => l.toUpperCase()) // Kapitalisasi setiap kata
+              .trim();
+  
+            imageCard.innerHTML = `
+              <img src="${image.url}" 
+                   alt="${imageTitle}" 
+                   decoding="async"
+                   onload="this.style.opacity='1'"
+                   onerror="this.style.opacity='0.5'; this.alt='Gagal memuat gambar';"
+                   style="opacity: 0; transition: opacity 0.3s ease;">
+              <div class="image-info">
+                <div class="image-title">${imageTitle}</div>
+              </div>
+            `;
+  
+            // Tambahkan event listener untuk modal
+            imageCard.addEventListener("click", () => {
+              openModal(image.url, imageTitle);
+            });
+  
+            galleryDiv.appendChild(imageCard);
+          });
+        }
+  
+        function setupPagination() {
+          const totalPages = Math.ceil(allImages.length / imagesPerPage);
+  
+          // Update page info
+          document.getElementById(
+            "pageInfo"
+          ).textContent = `Halaman ${currentPage} dari ${totalPages}`;
+  
+          // Setup prev/next buttons
+          const prevBtn = document.getElementById("prevBtn");
+          const nextBtn = document.getElementById("nextBtn");
+  
+          prevBtn.disabled = currentPage === 1;
+          nextBtn.disabled = currentPage === totalPages;
+  
+          // Setup page numbers
+          const pageNumbers = document.getElementById("pageNumbers");
+          pageNumbers.innerHTML = "";
+  
+          const maxVisiblePages = 5;
+          let startPage = Math.max(
+            1,
+            currentPage - Math.floor(maxVisiblePages / 2)
+          );
+          let endPage = Math.min(totalPages, startPage + maxVisiblePages - 1);
+  
+          if (endPage - startPage + 1 < maxVisiblePages) {
+            startPage = Math.max(1, endPage - maxVisiblePages + 1);
+          }
+  
+          for (let i = startPage; i <= endPage; i++) {
+            const pageBtn = document.createElement("button");
+            pageBtn.className = `pagination-btn page-number ${
+              i === currentPage ? "active" : ""
+            }`;
+            pageBtn.textContent = i;
+            pageBtn.addEventListener("click", () => {
+              currentPage = i;
+              // Load images for selected page
+              loadPageImages(currentPage);
+              displayCurrentPage();
+              setupPagination();
+            //   scrollToTop();
+            });
+            pageNumbers.appendChild(pageBtn);
+          }
+        }
+  
+  
+        // Modal functionality
+        function openModal(imageSrc, imageTitle) {
+          const modal = document.getElementById("imageModal");
+          const modalImg = document.getElementById("modalImage");
+  
+          modal.style.display = "block";
+          modalImg.src = imageSrc;
+          modalImg.alt = imageTitle;
+        }
+  
+        // Close modal
+        document.querySelector(".close").addEventListener("click", () => {
+          document.getElementById("imageModal").style.display = "none";
         });
-
-        // Prevent default behavior for pagination buttons
-        document.addEventListener('click', function(e) {
-            // Remove this event listener since we're using buttons now
+  
+        // Close modal ketika klik di luar gambar
+        document.getElementById("imageModal").addEventListener("click", (e) => {
+          if (e.target === e.currentTarget) {
+            document.getElementById("imageModal").style.display = "none";
+          }
         });
-    </script>
+  
+        // Close modal dengan ESC key
+        document.addEventListener("keydown", (e) => {
+          if (e.key === "Escape") {
+            document.getElementById("imageModal").style.display = "none";
+          }
+        });
+  
+        // Pagination event listeners
+        document.getElementById("prevBtn").addEventListener("click", () => {
+          if (currentPage > 1) {
+            currentPage--;
+            // Load images for current page
+            loadPageImages(currentPage);
+            displayCurrentPage();
+            setupPagination();
+            // scrollToTop();
+          }
+        });
+  
+        document.getElementById("nextBtn").addEventListener("click", () => {
+          const totalPages = Math.ceil(allImages.length / imagesPerPage);
+          if (currentPage < totalPages) {
+            currentPage++;
+            // Load images for current page
+            loadPageImages(currentPage);
+            displayCurrentPage();
+            setupPagination();
+            // scrollToTop();
+          }
+        });
+  
+        // Preload images for current page only
+        function preloadCurrentPageImages(images) {
+          images.forEach((image) => {
+            const img = new Image();
+            img.src = image.url;
+          });
+        }
+  
+        // Load images for specific page on demand
+        function loadPageImages(pageNumber) {
+          const startIndex = (pageNumber - 1) * imagesPerPage;
+          const endIndex = startIndex + imagesPerPage;
+          const pageImages = allImages.slice(startIndex, endIndex);
+  
+          pageImages.forEach((image) => {
+            const img = new Image();
+            img.src = image.url;
+          });
+        }
+  
+        // Load images ketika halaman dimuat
+        window.addEventListener("load", () => {
+          loadImages().then(() => {
+            // Hanya preload gambar halaman pertama
+            if (allImages.length > 0) {
+              const firstPageImages = allImages.slice(0, imagesPerPage);
+              preloadCurrentPageImages(firstPageImages);
+            }
+          });
+        });
+      </script>
 </body>
 
 </html>
